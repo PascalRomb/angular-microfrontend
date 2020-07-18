@@ -1,0 +1,21 @@
+<div class="d-flex flex-column bd-highlight mb-3">
+    
+    <div class="d-flex flex-row bd-highlight mx-3">
+        <strong class="pt-3">Available Plugins: </strong>
+        <ng-container *ngFor="let plugin of plugins">
+            <button type="button" class="m-2 btn" 
+            [ngClass]="{'btn-secondary': !plugin.active, 'btn-light': plugin.active}"
+            (click)="loadPlugin(plugin)">{{plugin.name}}</button>
+        </ng-container>
+    </div>
+    
+    
+    <div id="header" class="d-flex flex-row bd-highlight mx-3">
+    </div>
+    
+    <div id="body" class="d-flex flex-row bd-highlight mx-3">
+    </div>
+
+  </div>
+
+
